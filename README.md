@@ -4,7 +4,7 @@ android 实现虚拟鼠标方法
 uinput（User Input）是一个用于模拟用户输入的子系统。uinput 允许开发者通过软件方式模拟硬件输入设备的事件，比如键盘按键、鼠标移动、触摸屏触摸等。这对于自动化测试、远程控制和模拟用户交互等场景非常有用
 
 具体步骤：
-       1、打开uinput设备，获取设备文件描述符\n
+       1、打开uinput设备，获取设备文件描述符
           open("/dev/uinput", O_WRONLY | O_NONBLOCK)
        2、设置 uinput 设备参数，创建鼠标： 使用 ioctl 系统调用设置 uinput 设备的参数，如设备名称、支持的事件类型等
           //config uinput working mode,  mouse or touchscreen?  relative coordinates or absolute coordinate?
